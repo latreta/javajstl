@@ -57,6 +57,6 @@
 	<c:url value="/produto/formulario" var="urlAdicionar"/>
 	<a href="${urlAdicionar}">${nomeLink}</a>
 	<!--  <c:out value="${nomeLink}"/> -->
-	
+	<c:import url="../index/rodape.jsp"/>
 </body>
 </html>
