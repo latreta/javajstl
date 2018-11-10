@@ -35,10 +35,10 @@
 		<c:forEach var="produto" items="${produtoList}" varStatus="st">
 			<tr id="produto${produto.id}">
 			    <td>${st.count}</td>
-				<td>${produto.nome}</td>
-				<td>${produto.preco}</td>
+				<td>${produto.nome.toUpperCase()}</td>
+				<td><fmt:formatNumber value="${produto.preco}" type="currency"/></td>
 				<td>${produto.descricao}</td>
-				<td>${produto.dataInicioVenda.time}</td>
+				<td><fmt:formatDate pattern="EEEE,dd 'de' MMMM 'de' yyyy" value="${produto.dataInicioVenda.time}" /></td>
 				<td>
 					<c:if test="${produto.usado}">
 					    Sim
